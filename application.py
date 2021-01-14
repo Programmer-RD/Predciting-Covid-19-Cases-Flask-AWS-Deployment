@@ -39,4 +39,3 @@ def home():
         return redirect("/")
     else:
         return render_template("home.html")
-
