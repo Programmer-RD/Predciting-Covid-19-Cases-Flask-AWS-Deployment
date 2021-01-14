@@ -8,12 +8,12 @@ from sklearn.ensemble import BaggingRegressor
 from sklearn.ensemble import RandomForestRegressor
 import random
 
-app = Flask(__name__)
-app.secret_key = "Ranuga D 2008"
-app.debug = True
+application = Flask(__name__)
+application.secret_key = "Ranuga D 2008"
+application.debug = True
 
 
-@app.route("/", methods=["POST", "GET"])
+@application.route("/", methods=["POST", "GET"])
 def home():
     random_choice = random.choice([1, 2, 3])
     if random_choice == 1:
@@ -39,5 +39,4 @@ def home():
         return redirect("/")
     else:
         return render_template("home.html")
-if __name__ == "__main__":
-    app.run()
+
