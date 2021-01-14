@@ -19,7 +19,7 @@ def home():
         model = pickle.load(open("./models/model_KNeighborsRegressor.pkl", "rb"))
     else:
         model = pickle.load(open("./models/model_RandomForestRegressor.pkl", "rb"))
-    flash("Models Accuracy in testing is over 62.5%", "success")
+    flash("Models Accuracy in testing is over 62.5% the accuracy may change", "success")
     flash('DataSet : https://www.kaggle.com/imdevskp/corona-virus-report | User : https://www.kaggle.com/imdevskp | Website : https://www.kaggle.com/','info')
     if request.method == "POST":
         date = request.form["D"]
@@ -35,4 +35,4 @@ def home():
         flash('Note that these predictions are for the whole world not for a specific country. - These predictions may differ for different reasons.','danger')
         return redirect("/")
     else:
-        return render_template("home.html")
+        return render_template("./home.html")
