@@ -35,4 +35,4 @@ def home():
         return redirect("/")
     else:
 #         return render_template("./home.html")
-          return "Please work"
+        return "Please work"
