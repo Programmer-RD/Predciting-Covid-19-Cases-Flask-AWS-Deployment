@@ -7,6 +7,7 @@ import random
 
 application = Flask(__name__)
 app = application
+app.secret_key = 'RANUGA D 2008'
 @application.route("/", methods=["POST", "GET"])
 def home():
     model = pickle.load(open("./models/model_RandomForestRegressor.pkl", "rb"))
@@ -26,3 +27,5 @@ def home():
         return redirect("/")
     else:
         return render_template("./home.html")
+if __name__ == "__main__":
+    app.run()
