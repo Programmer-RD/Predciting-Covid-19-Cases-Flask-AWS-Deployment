@@ -34,4 +34,5 @@ def home():
         flash('Note that these predictions are for the whole world not for a specific country. - These predictions may differ for different reasons.','danger')
         return redirect("/")
     else:
-        return render_template("./home.html")
+#         return render_template("./home.html")
+          return "Please work"
