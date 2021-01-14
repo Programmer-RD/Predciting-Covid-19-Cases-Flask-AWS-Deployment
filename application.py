@@ -9,10 +9,6 @@ from sklearn.ensemble import RandomForestRegressor
 import random
 
 application = Flask(__name__)
-application.secret_key = "Ranuga D 2008"
-application.debug = True
-
-
 @application.route("/", methods=["POST", "GET"])
 def home():
     random_choice = random.choice([1, 2, 3])
