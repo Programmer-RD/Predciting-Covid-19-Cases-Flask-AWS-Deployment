@@ -20,7 +20,7 @@ def home():
         date_df = pd.DataFrame(date)
         results = model.predict(date_df.T)
         flash(
-            f"Confirmed : {results[0][0]} | Deaths : {results[0][1]} | Recovered : {results[0][2]} | Active : {results[0][3]} | New Cases : {results[0][4]} | New Deaths : {results[0][5]} | New Recovered : {results[0][6]}",
+            f"Confirmed : {round(results[0][0])} | Deaths : {round(results[0][1])} | Recovered : {round(results[0][2])} | Active : {round(results[0][3])} | New Cases : {round(results[0][4])} | New Deaths : {round(results[0][5])} | New Recovered : {round(results[0][6])}",
             "info",
         )
         flash('Note that these predictions are for the whole world not for a specific country. - These predictions may differ for different reasons.','danger')
